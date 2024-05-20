@@ -5,63 +5,92 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    color: #e0e1dd;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.main-header {
-    background: #007acc;
-    color: #fff;
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s, transform 0.3s;
+}
+
+a:hover {
+    color: #00aaff;
+    transform: scale(1.05);
+}
+
+header {
+    background: linear-gradient(135deg, #1b263b, #415a77);
+    color: #e0e1dd;
     padding: 20px 0;
     text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.main-header h1 {
+header h1 {
     margin-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-.main-header p {
+header p {
     margin-bottom: 10px;
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.nav-list {
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    padding: 10px;
+    background: #415a77;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.nav-list li {
+nav ul li {
     margin: 0 15px;
 }
 
-.nav-list li a {
-    color: #fff;
-    text-decoration: none;
+nav ul li a {
+    color: #e0e1dd;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.nav-list li a:hover {
-    color: #ffdd57;
+nav ul li a:hover {
+    color: #00aaff;
+    transform: scale(1.1);
 }
 
 main {
+    flex: 1;
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
+    background: #1b263b;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
 main h2 {
     margin-bottom: 20px;
-    font-size: 1.5em;
-    color: #007acc;
+    font-size: 2em;
+    color: #00aaff;
 }
 
 form {
@@ -72,6 +101,7 @@ form {
 form label {
     margin-bottom: 10px;
     font-weight: bold;
+    color: #e0e1dd;
 }
 
 .form-input {
@@ -80,31 +110,41 @@ form label {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.3);
+    outline: none;
 }
 
 .form-button {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background-color: #007acc;
+    background-color: #00aaff;
     color: white;
-    font-size: 1em;
+    font-size: 1.2em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .form-button:hover {
-    background-color: #005a99;
+    background-color: #0088cc;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 136, 204, 0.3);
 }
 
-.main-footer {
+footer {
     text-align: center;
-    padding: 10px 0;
-    background: #007acc;
-    color: #fff;
-    position: fixed;
-    width: 100%;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #1b263b, #415a77);
+    color: #e0e1dd;
+    position: sticky;
     bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar {
@@ -119,6 +159,13 @@ form label {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.3);
+    outline: none;
 }
 
 .main-image {
@@ -126,20 +173,40 @@ form label {
     max-width: 100%;
     height: auto;
     margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.main-image:hover {
+    transform: scale(1.05);
 }
 
 h3 {
     text-align: center;
     margin: 20px 0;
+    font-size: 1.5em;
 }
 
 h3 a {
-    color: #007acc;
-    text-decoration: none;
+    color: #00aaff;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s, transform 0.3s;
 }
 
 h3 a:hover {
-    color: #005a99;
+    color: #0088cc;
+    transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
