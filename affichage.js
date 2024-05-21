@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('http://localhost:8080/ords/restscott/bibliotheque/livre/')
         .then(response => response.json())
         .then(data => {
+            // Afficher les livres reçus
             afficherLivres(data.items);
             // Ajouter la fonctionnalité de recherche
             document.getElementById('searchInput').addEventListener('input', event => {

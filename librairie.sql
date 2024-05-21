@@ -147,7 +147,6 @@ INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_l
 INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (9, 9, TO_DATE('2023-05-09', 'YYYY-MM-DD'), TO_DATE('2023-06-09', 'YYYY-MM-DD'), 9, 9);
 INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (10, 10, TO_DATE('2023-05-10', 'YYYY-MM-DD'), TO_DATE('2023-06-10', 'YYYY-MM-DD'), 10, 10);
 
--- Activer le schéma pour ORDS
 BEGIN
   ORDS.enable_schema(
     p_enabled             => TRUE,
@@ -158,8 +157,8 @@ BEGIN
   );
   COMMIT;
 END;
+/
 
--- Activation des tables pour ORDS
 BEGIN
   ORDS.enable_object(
     p_enabled      => TRUE,
@@ -170,6 +169,7 @@ BEGIN
   );
   COMMIT;
 END;
+/
 
 BEGIN
   ORDS.enable_object(
@@ -181,6 +181,7 @@ BEGIN
   );
   COMMIT;
 END;
+/
 
 BEGIN
   ORDS.enable_object(
@@ -192,6 +193,7 @@ BEGIN
   );
   COMMIT;
 END;
+/
 
 BEGIN
   ORDS.enable_object(
@@ -203,6 +205,7 @@ BEGIN
   );
   COMMIT;
 END;
+/
 
 BEGIN
   ORDS.enable_object(
@@ -214,3 +217,5 @@ BEGIN
   );
   COMMIT;
 END;
+/
+
