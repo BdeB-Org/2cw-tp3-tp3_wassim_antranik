@@ -1,35 +1,57 @@
+function createNode(element) {
+    return document.createElement(element);
+}
+
+function append(parent, el) {
+    return parent.appendChild(el);
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const booksList = document.getElementById('booksList');
     const searchInput = document.getElementById('searchInput');
+    const url = "bibliotheque.json"; // URL du fichier JSON local
 
     let bibliotheque = [];
 
     // Fonction pour charger les livres depuis le fichier JSON
-    async function loadBooks() {
-        try {
-            const response = await fetch('bibliotheque.json');
-            const data = await response.json();
-            bibliotheque = data.bibliotheque.livres;
-        } catch (error) {
-            console.error('Erreur lors du chargement des livres:', error);
-        }
+    function loadBooks() {
+        fetch(url)
+            .then((resp) => resp.json())
+            .then(function(data) {
+                bibliotheque = data.bibliotheque.livres;
+            })
+            .catch(function(error) {
+                console.log('Erreur lors du chargement des livres:', error);
+            });
     }
 
     // Fonction pour afficher les livres
     function displayBooks(books) {
         booksList.innerHTML = '';
         books.forEach(book => {
-            const bookElement = document.createElement('div');
-            bookElement.className = 'book-item';
-            bookElement.innerHTML = `
-                <img src="${book.photo}" alt="${book.titre}">
-                <h3>${book.titre}</h3>
-                <p>Auteur: ${book.auteur}</p>
-                <p>Catégorie: ${book.categorie}</p>
-                <p>Disponible: ${book.disponible ? 'Oui' : 'Non'}</p>
-                <p>Date de publication: ${book.date_publication}</p>
-            `;
-            booksList.appendChild(bookElement);
+            let li = createNode('li'),
+                img = createNode('img'),
+                h3 = createNode('h3'),
+                p1 = createNode('p'),
+                p2 = createNode('p'),
+                p3 = createNode('p'),
+                p4 = createNode('p');
+                
+            img.src = book.photo;
+            img.alt = book.titre;
+            h3.textContent = book.titre;
+            p1.textContent = `Auteur: ${book.auteur}`;
+            p2.textContent = `Catégorie: ${book.categorie}`;
+            p3.textContent = `Disponible: ${book.disponible ? 'Oui' : 'Non'}`;
+            p4.textContent = `Date de publication: ${book.date_publication}`;
+
+            append(li, img);
+            append(li, h3);
+            append(li, p1);
+            append(li, p2);
+            append(li, p3);
+            append(li, p4);
+            append(booksList, li);
         });
     }
 
