@@ -4,40 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emprunter des Livres - Bibliothèque en Ligne</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="style.css">
     <script src="scripts.js"></script>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <h1>Emprunter des Livres</h1>
         <nav>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="livre.html">Liste des Livres</a></li>
                 <li><a href="inscription.html">Inscription</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section id="borrow-section">
             <h2>Formulaire d'Emprunt</h2>
-            <form id="borrow-form">
+            <form id="borrow-form" class="borrow-form">
                 <label for="user-id">ID Utilisateur:</label>
-                <input type="text" id="user-id" name="user-id" required>
+                <input type="text" id="user-id" name="user-id" class="form-input" required>
 
                 <label for="book-id">ID du Livre:</label>
-                <input type="text" id="book-id" name="book-id" required>
+                <input type="text" id="book-id" name="book-id" class="form-input" required>
 
-                <button type="submit">Emprunter</button>
+                <button type="submit" class="form-button">Emprunter</button>
             </form>
         </section>
     </main>
-
-    <footer>
+    <footer class="main-footer">
         <p>&copy; 2024 Bibliothèque en Ligne. Tous droits réservés.</p>
     </footer>
-
-   
 </body>
 </html>

@@ -4,42 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription - Bibliothèque en Ligne</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <h1>Inscription</h1>
         <nav>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="livre.html">Liste des Livres</a></li>
                 <li><a href="emprunt.html">Emprunter</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section id="signup-section">
             <h2>Formulaire d'Inscription</h2>
-            <form id="signup-form">
+            <form id="signup-form" class="signup-form">
                 <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" class="form-input" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" class="form-input" required>
 
                 <label for="password">Mot de passe:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" class="form-input" required>
 
-                <button type="submit">S'inscrire</button>
+                <button type="submit" class="form-button">S'inscrire</button>
             </form>
         </section>
     </main>
-
-    <footer>
+    <footer class="main-footer">
         <p>&copy; 2024 Bibliothèque en Ligne. Tous droits réservés.</p>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>

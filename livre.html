@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livres</title>
+    <title>Livres - Bibliothèque en Ligne</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <h1>Bienvenue à Notre Bibliothèque</h1>
         <h2>Explorez notre collection de livres</h2>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="inscription.html">Inscription</a></li>
-            <li><a href="emprunt.html">Emprunter</a></li>
-        </ul>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="emprunt.html">Emprunter</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Recherchez un livre...">
-    </div>
+    <main>
+        <div class="search-bar">
+            <input type="text" id="searchInput" class="search-input" placeholder="Recherchez un livre...">
+        </div>
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2024 Bibliothèque en Ligne. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
