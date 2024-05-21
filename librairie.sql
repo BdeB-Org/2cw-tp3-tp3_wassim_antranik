@@ -132,3 +132,27 @@ INSERT INTO auteur (id_auteur, nom, livre_id_livre) VALUES (17, 'Homère', 17);
 INSERT INTO auteur (id_auteur, nom, livre_id_livre) VALUES (18, 'Dante Alighieri', 18);
 INSERT INTO auteur (id_auteur, nom, livre_id_livre) VALUES (19, 'J.R.R. Tolkien', 19);
 INSERT INTO auteur (id_auteur, nom, livre_id_livre) VALUES (20, 'J.K. Rowling', 20);
+
+-- Insertion des emprunteurs uniques
+INSERT INTO emprunteur (id_emprunteur, nom, email) VALUES (1, 'John Doe', 'john.doe@example.com');
+INSERT INTO emprunteur (id_emprunteur, nom, email) VALUES (2, 'Jane Smith', 'jane.smith@example.com');
+INSERT INTO emprunteur (id_emprunteur, nom, email) VALUES (3, 'Michael Johnson', 'michael.johnson@example.com');
+INSERT INTO emprunteur (id_emprunteur, nom, email) VALUES (4, 'Emily Davis', 'emily.davis@example.com');
+INSERT INTO emprunteur (id_emprunteur, nom, email) VALUES (5, 'David Wilson', 'david.wilson@example.com');
+INSERT INTO emprunteur (id_emprunteur, nom, email) VALUES (6, 'Sarah Brown', 'sarah.brown@example.com');
+INSERT INTO emprunteur (id_emprunteur, nom, email) VALUES (7, 'James Miller', 'james.miller@example.com');
+INSERT INTO emprunteur (id_emprunteur, nom, email) VALUES (8, 'Patricia Taylor', 'patricia.taylor@example.com');
+INSERT INTO emprunteur (id_emprunteur, nom, email) VALUES (9, 'Robert Anderson', 'robert.anderson@example.com');
+INSERT INTO emprunteur (id_emprunteur, nom, email) VALUES (10, 'Linda Thomas', 'linda.thomas@example.com');
+
+-- Insertion des emprunts uniques
+INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (1, 1, TO_DATE('2023-05-01', 'YYYY-MM-DD'), TO_DATE('2023-06-01', 'YYYY-MM-DD'), 1, 1);
+INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (2, 2, TO_DATE('2023-05-02', 'YYYY-MM-DD'), TO_DATE('2023-06-02', 'YYYY-MM-DD'), 2, 2);
+INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (3, 3, TO_DATE('2023-05-03', 'YYYY-MM-DD'), TO_DATE('2023-06-03', 'YYYY-MM-DD'), 3, 3);
+INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (4, 4, TO_DATE('2023-05-04', 'YYYY-MM-DD'), TO_DATE('2023-06-04', 'YYYY-MM-DD'), 4, 4);
+INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (5, 5, TO_DATE('2023-05-05', 'YYYY-MM-DD'), TO_DATE('2023-06-05', 'YYYY-MM-DD'), 5, 5);
+INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (6, 6, TO_DATE('2023-05-06', 'YYYY-MM-DD'), TO_DATE('2023-06-06', 'YYYY-MM-DD'), 6, 6);
+INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (7, 7, TO_DATE('2023-05-07', 'YYYY-MM-DD'), TO_DATE('2023-06-07', 'YYYY-MM-DD'), 7, 7);
+INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (8, 8, TO_DATE('2023-05-08', 'YYYY-MM-DD'), TO_DATE('2023-06-08', 'YYYY-MM-DD'), 8, 8);
+INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (9, 9, TO_DATE('2023-05-09', 'YYYY-MM-DD'), TO_DATE('2023-06-09', 'YYYY-MM-DD'), 9, 9);
+INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (10, 10, TO_DATE('2023-05-10', 'YYYY-MM-DD'), TO_DATE('2023-06-10', 'YYYY-MM-DD'), 10, 10);
