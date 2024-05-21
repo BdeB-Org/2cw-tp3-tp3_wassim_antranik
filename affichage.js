@@ -1,75 +1,34 @@
-function createNode(element) {
-    return document.createElement(element);
-}
-
-function append(parent, el) {
-    return parent.appendChild(el);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    const booksList = document.getElementById('booksList');
-    const searchInput = document.getElementById('searchInput');
-    const url = "bibliotheque.json"; // URL du fichier JSON local
-
-    let bibliotheque = [];
-
-    // Fonction pour charger les livres depuis le fichier JSON
-    function loadBooks() {
-        fetch(url)
-            .then((resp) => resp.json())
-            .then(function(data) {
-                bibliotheque = data.bibliotheque.livres;
-            })
-            .catch(function(error) {
-                console.log('Erreur lors du chargement des livres:', error);
+document.addEventListener('DOMContentLoaded', () => {
+    // Charger et afficher les livres depuis l'API REST
+    fetch('http://localhost:8080/ords/restscott/bibliotheque/livre/')
+        .then(response => response.json())
+        .then(data => {
+            afficherLivres(data.items);
+            // Ajouter la fonctionnalité de recherche
+            document.getElementById('searchInput').addEventListener('input', event => {
+                rechercherLivres(event.target.value, data.items);
             });
-    }
-
-    // Fonction pour afficher les livres
-    function displayBooks(books) {
-        booksList.innerHTML = '';
-        books.forEach(book => {
-            let li = createNode('li'),
-                img = createNode('img'),
-                h3 = createNode('h3'),
-                p1 = createNode('p'),
-                p2 = createNode('p'),
-                p3 = createNode('p'),
-                p4 = createNode('p');
-                
-            img.src = book.photo;
-            img.alt = book.titre;
-            h3.textContent = book.titre;
-            p1.textContent = `Auteur: ${book.auteur}`;
-            p2.textContent = `Catégorie: ${book.categorie}`;
-            p3.textContent = `Disponible: ${book.disponible ? 'Oui' : 'Non'}`;
-            p4.textContent = `Date de publication: ${book.date_publication}`;
-
-            append(li, img);
-            append(li, h3);
-            append(li, p1);
-            append(li, p2);
-            append(li, p3);
-            append(li, p4);
-            append(booksList, li);
-        });
-    }
-
-    // Fonction pour rechercher les livres
-    function searchBooks(query) {
-        const results = bibliotheque.filter(book =>
-            book.titre.toLowerCase().includes(query.toLowerCase())
-        );
-        displayBooks(results);
-    }
-
-    // Charger les livres au chargement initial de la page
-    loadBooks();
-
-    // Événement pour le champ de recherche
-    searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            searchBooks(searchInput.value);
-        }
-    });
+        })
+        .catch(error => console.error('Erreur lors du chargement des livres:', error));
 });
+
+function afficherLivres(livres) {
+    const booksList = document.getElementById('booksList');
+    booksList.innerHTML = ''; // Vider la liste des livres
+    livres.forEach(livre => {
+        const bookItem = document.createElement('div');
+        bookItem.className = 'book-item';
+        bookItem.innerHTML = `
+            <h3>${livre.titre}</h3>
+            <p><strong>Auteur :</strong> ${livre.auteur_id}</p>
+            <p><strong>Genre :</strong> ${livre.genre_id}</p>
+            <p><strong>Disponible :</strong> ${livre.disponibilite === 'Y' ? 'Oui' : 'Non'}</p>
+        `;
+        booksList.appendChild(bookItem);
+    });
+}
+
+function rechercherLivres(terme, livres) {
+    const livresFiltres = livres.filter(livre => livre.titre.toLowerCase().includes(terme.toLowerCase()));
+    afficherLivres(livresFiltres);
+}
