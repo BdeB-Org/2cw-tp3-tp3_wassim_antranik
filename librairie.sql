@@ -1,5 +1,4 @@
--- Création des tables
-
+-- Création de la table auteur
 CREATE TABLE auteur (
     id_auteur      NUMBER NOT NULL,
     nom            VARCHAR2(50) NOT NULL,
@@ -8,6 +7,7 @@ CREATE TABLE auteur (
 
 ALTER TABLE auteur ADD CONSTRAINT auteur_pk PRIMARY KEY (id_auteur);
 
+-- Création de la table emprunt
 CREATE TABLE emprunt (
     id_emprunt               NUMBER NOT NULL,
     id_livre                 NUMBER NOT NULL,
@@ -18,11 +18,11 @@ CREATE TABLE emprunt (
 );
 
 CREATE UNIQUE INDEX emprunt__idx ON emprunt (emprunteur_id_emprunteur ASC);
-
 CREATE UNIQUE INDEX emprunt__idxv1 ON emprunt (livre_id_livre ASC);
 
 ALTER TABLE emprunt ADD CONSTRAINT emprunt_pk PRIMARY KEY (id_emprunt);
 
+-- Création de la table emprunteur
 CREATE TABLE emprunteur (
     id_emprunteur NUMBER NOT NULL,
     nom           VARCHAR2(30) NOT NULL,
@@ -31,6 +31,7 @@ CREATE TABLE emprunteur (
 
 ALTER TABLE emprunteur ADD CONSTRAINT emprunteur_pk PRIMARY KEY (id_emprunteur);
 
+-- Création de la table genre
 CREATE TABLE genre (
     id_genre       NUMBER NOT NULL,
     nom            VARCHAR2(15) NOT NULL,
@@ -39,6 +40,7 @@ CREATE TABLE genre (
 
 ALTER TABLE genre ADD CONSTRAINT genre_pk PRIMARY KEY (id_genre);
 
+-- Création de la table livre
 CREATE TABLE livre (
     id_livre      NUMBER NOT NULL,
     titre         VARCHAR2(50) NOT NULL,
@@ -50,22 +52,10 @@ CREATE TABLE livre (
 ALTER TABLE livre ADD CONSTRAINT livre_pk PRIMARY KEY (id_livre);
 
 -- Définition des relations entre les tables
-
-ALTER TABLE auteur
-    ADD CONSTRAINT auteur_livre_fk FOREIGN KEY (livre_id_livre)
-        REFERENCES livre (id_livre);
-
-ALTER TABLE emprunt
-    ADD CONSTRAINT emprunt_emprunteur_fk FOREIGN KEY (emprunteur_id_emprunteur)
-        REFERENCES emprunteur (id_emprunteur);
-
-ALTER TABLE emprunt
-    ADD CONSTRAINT emprunt_livre_fk FOREIGN KEY (livre_id_livre)
-        REFERENCES livre (id_livre);
-
-ALTER TABLE genre
-    ADD CONSTRAINT genre_livre_fk FOREIGN KEY (livre_id_livre)
-        REFERENCES livre (id_livre);
+ALTER TABLE auteur ADD CONSTRAINT auteur_livre_fk FOREIGN KEY (livre_id_livre) REFERENCES livre (id_livre);
+ALTER TABLE emprunt ADD CONSTRAINT emprunt_emprunteur_fk FOREIGN KEY (emprunteur_id_emprunteur) REFERENCES emprunteur (id_emprunteur);
+ALTER TABLE emprunt ADD CONSTRAINT emprunt_livre_fk FOREIGN KEY (livre_id_livre) REFERENCES livre (id_livre);
+ALTER TABLE genre ADD CONSTRAINT genre_livre_fk FOREIGN KEY (livre_id_livre) REFERENCES livre (id_livre);
 
 -- Insertion des livres
 INSERT INTO livre (id_livre, titre, auteur_id, genre_id, disponibilite) VALUES (1, 'Le Petit Prince', 1, 1, 'Y');
@@ -156,3 +146,71 @@ INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_l
 INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (8, 8, TO_DATE('2023-05-08', 'YYYY-MM-DD'), TO_DATE('2023-06-08', 'YYYY-MM-DD'), 8, 8);
 INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (9, 9, TO_DATE('2023-05-09', 'YYYY-MM-DD'), TO_DATE('2023-06-09', 'YYYY-MM-DD'), 9, 9);
 INSERT INTO emprunt (id_emprunt, id_livre, date_emprunt, date_retour, livre_id_livre, emprunteur_id_emprunteur) VALUES (10, 10, TO_DATE('2023-05-10', 'YYYY-MM-DD'), TO_DATE('2023-06-10', 'YYYY-MM-DD'), 10, 10);
+
+-- Activer le schéma pour ORDS
+BEGIN
+  ORDS.enable_schema(
+    p_enabled             => TRUE,
+    p_schema              => 'RESTSCOTT',
+    p_url_mapping_type    => 'BASE_PATH',
+    p_url_mapping_pattern => 'bibliotheque',
+    p_auto_rest_auth      => FALSE
+  );
+  COMMIT;
+END;
+
+-- Activation des tables pour ORDS
+BEGIN
+  ORDS.enable_object(
+    p_enabled      => TRUE,
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'LIVRE',
+    p_object_type  => 'TABLE',
+    p_object_alias => 'livre'
+  );
+  COMMIT;
+END;
+
+BEGIN
+  ORDS.enable_object(
+    p_enabled      => TRUE,
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'AUTEUR',
+    p_object_type  => 'TABLE',
+    p_object_alias => 'auteur'
+  );
+  COMMIT;
+END;
+
+BEGIN
+  ORDS.enable_object(
+    p_enabled      => TRUE,
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'EMPRUNT',
+    p_object_type  => 'TABLE',
+    p_object_alias => 'emprunt'
+  );
+  COMMIT;
+END;
+
+BEGIN
+  ORDS.enable_object(
+    p_enabled      => TRUE,
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'EMPRUNTEUR',
+    p_object_type  => 'TABLE',
+    p_object_alias => 'emprunteur'
+  );
+  COMMIT;
+END;
+
+BEGIN
+  ORDS.enable_object(
+    p_enabled      => TRUE,
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'GENRE',
+    p_object_type  => 'TABLE',
+    p_object_alias => 'genre'
+  );
+  COMMIT;
+END;
