@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livres - Bibliothèque en Ligne</title>
     <link rel="stylesheet" href="style.css">
+    <script src="affichage.js" defer></script>
 </head>
 <body>
     <header class="main-header">
@@ -20,8 +21,9 @@
     </header>
     <main>
         <div class="search-bar">
-            <input type="text" id="searchInput" class="search-input" placeholder="Recherchez un livre...">
+            <input type="text" id="searchInput" placeholder="Recherchez un livre...">
         </div>
+        <div id="booksList" class="books-list"></div>
     </main>
     <footer class="main-footer">
         <p>&copy; 2024 Bibliothèque en Ligne. Tous droits réservés.</p>

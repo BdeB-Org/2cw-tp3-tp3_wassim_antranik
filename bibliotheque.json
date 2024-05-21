@@ -1,0 +1,907 @@
+{
+    "bibliotheque": {
+      "livres": [
+        {
+          "id": 1,
+          "titre": "Le Petit Prince",
+          "auteur": "Antoine de Saint-Exupéry",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1943-04-06",
+          "photo": "https://example.com/photos/le_petit_prince.jpg"
+        },
+        {
+          "id": 2,
+          "titre": "1984",
+          "auteur": "George Orwell",
+          "categorie": "Science-Fiction",
+          "disponible": false,
+          "date_publication": "1949-06-08",
+          "photo": "https://example.com/photos/1984.jpg"
+        },
+        {
+          "id": 3,
+          "titre": "Les Misérables",
+          "auteur": "Victor Hugo",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1862-01-01",
+          "photo": "https://example.com/photos/les_miserables.jpg"
+        },
+        {
+          "id": 4,
+          "titre": "L'Étranger",
+          "auteur": "Albert Camus",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1942-01-01",
+          "photo": "https://example.com/photos/l_etranger.jpg"
+        },
+        {
+          "id": 5,
+          "titre": "Crime et Châtiment",
+          "auteur": "Fiodor Dostoïevski",
+          "categorie": "Classique",
+          "disponible": false,
+          "date_publication": "1866-01-01",
+          "photo": "https://example.com/photos/crime_et_chatiment.jpg"
+        },
+        {
+          "id": 6,
+          "titre": "Don Quichotte",
+          "auteur": "Miguel de Cervantes",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1605-01-16",
+          "photo": "https://example.com/photos/don_quichotte.jpg"
+        },
+        {
+          "id": 7,
+          "titre": "Moby Dick",
+          "auteur": "Herman Melville",
+          "categorie": "Aventure",
+          "disponible": true,
+          "date_publication": "1851-10-18",
+          "photo": "https://example.com/photos/moby_dick.jpg"
+        },
+        {
+          "id": 8,
+          "titre": "Germinal",
+          "auteur": "Émile Zola",
+          "categorie": "Fiction",
+          "disponible": false,
+          "date_publication": "1885-03-01",
+          "photo": "https://example.com/photos/germinal.jpg"
+        },
+        {
+          "id": 9,
+          "titre": "La Métamorphose",
+          "auteur": "Franz Kafka",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1915-01-01",
+          "photo": "https://example.com/photos/la_metamorphose.jpg"
+        },
+        {
+          "id": 10,
+          "titre": "Le Comte de Monte-Cristo",
+          "auteur": "Alexandre Dumas",
+          "categorie": "Aventure",
+          "disponible": true,
+          "date_publication": "1844-01-01",
+          "photo": "https://example.com/photos/le_comte_de_monte_cristo.jpg"
+        },
+        {
+          "id": 11,
+          "titre": "Bel-Ami",
+          "auteur": "Guy de Maupassant",
+          "categorie": "Fiction",
+          "disponible": false,
+          "date_publication": "1885-01-01",
+          "photo": "https://example.com/photos/bel_ami.jpg"
+        },
+        {
+          "id": 12,
+          "titre": "Le Rouge et le Noir",
+          "auteur": "Stendhal",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1830-11-01",
+          "photo": "https://example.com/photos/le_rouge_et_le_noir.jpg"
+        },
+        {
+          "id": 13,
+          "titre": "La Peste",
+          "auteur": "Albert Camus",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1947-01-01",
+          "photo": "https://example.com/photos/la_peste.jpg"
+        },
+        {
+          "id": 14,
+          "titre": "L'Île mystérieuse",
+          "auteur": "Jules Verne",
+          "categorie": "Aventure",
+          "disponible": true,
+          "date_publication": "1874-01-01",
+          "photo": "https://example.com/photos/l_ile_mysterieuse.jpg"
+        },
+        {
+          "id": 15,
+          "titre": "Madame Bovary",
+          "auteur": "Gustave Flaubert",
+          "categorie": "Fiction",
+          "disponible": false,
+          "date_publication": "1857-01-01",
+          "photo": "https://example.com/photos/madame_bovary.jpg"
+        },
+        {
+          "id": 16,
+          "titre": "Les Fleurs du mal",
+          "auteur": "Charles Baudelaire",
+          "categorie": "Poésie",
+          "disponible": true,
+          "date_publication": "1857-01-01",
+          "photo": "https://example.com/photos/les_fleurs_du_mal.jpg"
+        },
+        {
+          "id": 17,
+          "titre": "L'Odyssée",
+          "auteur": "Homère",
+          "categorie": "Épopée",
+          "disponible": true,
+          "date_publication": "-800-01-01",
+          "photo": "https://example.com/photos/l_odyssee.jpg"
+        },
+        {
+          "id": 18,
+          "titre": "La Divine Comédie",
+          "auteur": "Dante Alighieri",
+          "categorie": "Poésie",
+          "disponible": false,
+          "date_publication": "1320-01-01",
+          "photo": "https://example.com/photos/la_divine_comedie.jpg"
+        },
+        {
+          "id": 19,
+          "titre": "Le Seigneur des Anneaux",
+          "auteur": "J.R.R. Tolkien",
+          "categorie": "Fantasy",
+          "disponible": true,
+          "date_publication": "1954-07-29",
+          "photo": "https://example.com/photos/le_seigneur_des_anneaux.jpg"
+        },
+        {
+          "id": 20,
+          "titre": "Harry Potter à l'école des sorciers",
+          "auteur": "J.K. Rowling",
+          "categorie": "Fantasy",
+          "disponible": false,
+          "date_publication": "1997-06-26",
+          "photo": "https://example.com/photos/harry_potter_ecole_sorciers.jpg"
+        },
+        {
+          "id": 21,
+          "titre": "La Chartreuse de Parme",
+          "auteur": "Stendhal",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1839-01-01",
+          "photo": "https://example.com/photos/la_chartreuse_de_parme.jpg"
+        },
+        {
+          "id": 22,
+          "titre": "Candide",
+          "auteur": "Voltaire",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1759-01-01",
+          "photo": "https://example.com/photos/candide.jpg"
+        },
+        {
+          "id": 23,
+          "titre": "Les Trois Mousquetaires",
+          "auteur": "Alexandre Dumas",
+          "categorie": "Aventure",
+          "disponible": true,
+          "date_publication": "1844-01-01",
+          "photo": "https://example.com/photos/les_trois_mousquetaires.jpg"
+        },
+        {
+          "id": 24,
+          "titre": "Les Confessions",
+          "auteur": "Jean-Jacques Rousseau",
+          "categorie": "Autobiographie",
+          "disponible": true,
+          "date_publication": "1782-01-01",
+          "photo": "https://example.com/photos/les_confessions.jpg"
+        },
+        {
+          "id": 25,
+          "titre": "Voyage au centre de la Terre",
+          "auteur": "Jules Verne",
+          "categorie": "Science-Fiction",
+          "disponible": true,
+          "date_publication": "1864-01-01",
+          "photo": "https://example.com/photos/voyage_au_centre_de_la_terre.jpg"
+        },
+        {
+          "id": 26,
+          "titre": "La Guerre des mondes",
+          "auteur": "H.G. Wells",
+          "categorie": "Science-Fiction",
+          "disponible": true,
+          "date_publication": "1898-01-01",
+          "photo": "https://example.com/photos/la_guerre_des_mondes.jpg"
+        },
+        {
+          "id": 27,
+          "titre": "Frankenstein",
+          "auteur": "Mary Shelley",
+          "categorie": "Horreur",
+          "disponible": true,
+          "date_publication": "1818-01-01",
+          "photo": "https://example.com/photos/frankenstein.jpg"
+        },
+        {
+          "id": 28,
+          "titre": "Dracula",
+          "auteur": "Bram Stoker",
+          "categorie": "Horreur",
+          "disponible": true,
+          "date_publication": "1897-01-01",
+          "photo": "https://example.com/photos/dracula.jpg"
+        },
+        {
+          "id": 29,
+          "titre": "Le Vieil Homme et la Mer",
+          "auteur": "Ernest Hemingway",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1952-01-01",
+          "photo": "https://example.com/photos/le_vieil_homme_et_la_mer.jpg"
+        },
+        {
+          "id": 30,
+          "titre": "Les Aventures de Huckleberry Finn",
+          "auteur": "Mark Twain",
+          "categorie": "Aventure",
+          "disponible": true,
+          "date_publication": "1884-01-01",
+          "photo": "https://example.com/photos/huckleberry_finn.jpg"
+        },
+        {
+          "id": 31,
+          "titre": "Robinson Crusoé",
+          "auteur": "Daniel Defoe",
+          "categorie": "Aventure",
+          "disponible": true,
+          "date_publication": "1719-01-01",
+          "photo": "https://example.com/photos/robinson_crusoe.jpg"
+        },
+        {
+          "id": 32,
+          "titre": "Oliver Twist",
+          "auteur": "Charles Dickens",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1837-01-01",
+          "photo": "https://example.com/photos/oliver_twist.jpg"
+        },
+        {
+          "id": 33,
+          "titre": "Les Aventures de Sherlock Holmes",
+          "auteur": "Arthur Conan Doyle",
+          "categorie": "Mystère",
+          "disponible": true,
+          "date_publication": "1892-01-01",
+          "photo": "https://example.com/photos/sherlock_holmes.jpg"
+        },
+        {
+          "id": 34,
+          "titre": "Les Hauts de Hurlevent",
+          "auteur": "Emily Brontë",
+          "categorie": "Romance",
+          "disponible": true,
+          "date_publication": "1847-01-01",
+          "photo": "https://example.com/photos/les_hauts_de_hurlevent.jpg"
+        },
+        {
+          "id": 35,
+          "titre": "Orgueil et Préjugés",
+          "auteur": "Jane Austen",
+          "categorie": "Romance",
+          "disponible": true,
+          "date_publication": "1813-01-01",
+          "photo": "https://example.com/photos/orgueil_et_prejuges.jpg"
+        },
+        {
+          "id": 36,
+          "titre": "Le Meilleur des mondes",
+          "auteur": "Aldous Huxley",
+          "categorie": "Science-Fiction",
+          "disponible": true,
+          "date_publication": "1932-01-01",
+          "photo": "https://example.com/photos/le_meilleur_des_mondes.jpg"
+        },
+        {
+          "id": 37,
+          "titre": "La Ferme des animaux",
+          "auteur": "George Orwell",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1945-01-01",
+          "photo": "https://example.com/photos/la_ferme_des_animaux.jpg"
+        },
+        {
+          "id": 38,
+          "titre": "Le Songe d'une nuit d'été",
+          "auteur": "William Shakespeare",
+          "categorie": "Théâtre",
+          "disponible": true,
+          "date_publication": "1600-01-01",
+          "photo": "https://example.com/photos/le_songe_d_une_nuit_d_ete.jpg"
+        },
+        {
+          "id": 39,
+          "titre": "Hamlet",
+          "auteur": "William Shakespeare",
+          "categorie": "Théâtre",
+          "disponible": true,
+          "date_publication": "1603-01-01",
+          "photo": "https://example.com/photos/hamlet.jpg"
+        },
+        {
+          "id": 40,
+          "titre": "Roméo et Juliette",
+          "auteur": "William Shakespeare",
+          "categorie": "Théâtre",
+          "disponible": true,
+          "date_publication": "1597-01-01",
+          "photo": "https://example.com/photos/romeo_et_juliette.jpg"
+        },
+        {
+          "id": 41,
+          "titre": "La Maison des esprits",
+          "auteur": "Isabel Allende",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1982-01-01",
+          "photo": "https://example.com/photos/la_maison_des_esprits.jpg"
+        },
+        {
+          "id": 42,
+          "titre": "Le Parrain",
+          "auteur": "Mario Puzo",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1969-01-01",
+          "photo": "https://example.com/photos/le_parrain.jpg"
+        },
+        {
+          "id": 43,
+          "titre": "Autant en emporte le vent",
+          "auteur": "Margaret Mitchell",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1936-01-01",
+          "photo": "https://example.com/photos/autant_en_emporte_le_vent.jpg"
+        },
+        {
+          "id": 44,
+          "titre": "Les Raisins de la colère",
+          "auteur": "John Steinbeck",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1939-01-01",
+          "photo": "https://example.com/photos/les_raisins_de_la_colere.jpg"
+        },
+        {
+          "id": 45,
+          "titre": "Des Souris et des hommes",
+          "auteur": "John Steinbeck",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1937-01-01",
+          "photo": "https://example.com/photos/des_souris_et_des_hommes.jpg"
+        },
+        {
+          "id": 46,
+          "titre": "Le Procès",
+          "auteur": "Franz Kafka",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1925-01-01",
+          "photo": "https://example.com/photos/le_proces.jpg"
+        },
+        {
+          "id": 47,
+          "titre": "Le Château",
+          "auteur": "Franz Kafka",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1926-01-01",
+          "photo": "https://example.com/photos/le_chateau.jpg"
+        },
+        {
+          "id": 48,
+          "titre": "Cent ans de solitude",
+          "auteur": "Gabriel Garcia Marquez",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1967-01-01",
+          "photo": "https://example.com/photos/cent_ans_de_solitude.jpg"
+        },
+        {
+          "id": 49,
+          "titre": "L'Amour aux temps du choléra",
+          "auteur": "Gabriel Garcia Marquez",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1985-01-01",
+          "photo": "https://example.com/photos/l_amour_aux_temps_du_cholera.jpg"
+        },
+        {
+          "id": 50,
+          "titre": "Chronique d'une mort annoncée",
+          "auteur": "Gabriel Garcia Marquez",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1981-01-01",
+          "photo": "https://example.com/photos/chronique_d_une_mort_annoncee.jpg"
+        },
+        {
+          "id": 51,
+          "titre": "Les Frères Karamazov",
+          "auteur": "Fiodor Dostoïevski",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1880-01-01",
+          "photo": "https://example.com/photos/les_freres_karamazov.jpg"
+        },
+        {
+          "id": 52,
+          "titre": "Anna Karénine",
+          "auteur": "Léon Tolstoï",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1877-01-01",
+          "photo": "https://example.com/photos/anna_karenine.jpg"
+        },
+        {
+          "id": 53,
+          "titre": "Guerre et Paix",
+          "auteur": "Léon Tolstoï",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1869-01-01",
+          "photo": "https://example.com/photos/guerre_et_paix.jpg"
+        },
+        {
+          "id": 54,
+          "titre": "La Dame aux camélias",
+          "auteur": "Alexandre Dumas fils",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1848-01-01",
+          "photo": "https://example.com/photos/la_dame_aux_camelias.jpg"
+        },
+        {
+          "id": 55,
+          "titre": "Le Père Goriot",
+          "auteur": "Honoré de Balzac",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1835-01-01",
+          "photo": "https://example.com/photos/le_pere_goriot.jpg"
+        },
+        {
+          "id": 56,
+          "titre": "Eugénie Grandet",
+          "auteur": "Honoré de Balzac",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1833-01-01",
+          "photo": "https://example.com/photos/eugenie_grandet.jpg"
+        },
+        {
+          "id": 57,
+          "titre": "La Peau de chagrin",
+          "auteur": "Honoré de Balzac",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1831-01-01",
+          "photo": "https://example.com/photos/la_peau_de_chagrin.jpg"
+        },
+        {
+          "id": 58,
+          "titre": "Le Tour du monde en 80 jours",
+          "auteur": "Jules Verne",
+          "categorie": "Aventure",
+          "disponible": true,
+          "date_publication": "1873-01-01",
+          "photo": "https://example.com/photos/le_tour_du_monde_en_80_jours.jpg"
+        },
+        {
+          "id": 59,
+          "titre": "20 000 lieues sous les mers",
+          "auteur": "Jules Verne",
+          "categorie": "Aventure",
+          "disponible": true,
+          "date_publication": "1870-01-01",
+          "photo": "https://example.com/photos/20_000_lieues_sous_les_mers.jpg"
+        },
+        {
+          "id": 60,
+          "titre": "De la Terre à la Lune",
+          "auteur": "Jules Verne",
+          "categorie": "Science-Fiction",
+          "disponible": true,
+          "date_publication": "1865-01-01",
+          "photo": "https://example.com/photos/de_la_terre_a_la_lune.jpg"
+        },
+        {
+          "id": 61,
+          "titre": "L'Enfer",
+          "auteur": "Dante Alighieri",
+          "categorie": "Poésie",
+          "disponible": true,
+          "date_publication": "1308-01-01",
+          "photo": "https://example.com/photos/l_enfer.jpg"
+        },
+        {
+          "id": 62,
+          "titre": "Les Aventures d'Alice au pays des merveilles",
+          "auteur": "Lewis Carroll",
+          "categorie": "Fantasy",
+          "disponible": true,
+          "date_publication": "1865-01-01",
+          "photo": "https://example.com/photos/alice_au_pays_des_merveilles.jpg"
+        },
+        {
+          "id": 63,
+          "titre": "À la recherche du temps perdu",
+          "auteur": "Marcel Proust",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1913-01-01",
+          "photo": "https://example.com/photos/a_la_recherche_du_temps_perdu.jpg"
+        },
+        {
+          "id": 64,
+          "titre": "Le Prince",
+          "auteur": "Nicolas Machiavel",
+          "categorie": "Philosophie",
+          "disponible": true,
+          "date_publication": "1532-01-01",
+          "photo": "https://example.com/photos/le_prince.jpg"
+        },
+        {
+          "id": 65,
+          "titre": "Ulysse",
+          "auteur": "James Joyce",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1922-01-01",
+          "photo": "https://example.com/photos/ulysse.jpg"
+        },
+        {
+          "id": 66,
+          "titre": "La Montagne magique",
+          "auteur": "Thomas Mann",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1924-01-01",
+          "photo": "https://example.com/photos/la_montagne_magique.jpg"
+        },
+        {
+          "id": 67,
+          "titre": "Le Nom de la rose",
+          "auteur": "Umberto Eco",
+          "categorie": "Mystère",
+          "disponible": true,
+          "date_publication": "1980-01-01",
+          "photo": "https://example.com/photos/le_nom_de_la_rose.jpg"
+        },
+        {
+          "id": 68,
+          "titre": "Le Maître et Marguerite",
+          "auteur": "Mikhaïl Boulgakov",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1966-01-01",
+          "photo": "https://example.com/photos/le_maitre_et_marguerite.jpg"
+        },
+        {
+          "id": 69,
+          "titre": "Lolita",
+          "auteur": "Vladimir Nabokov",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1955-01-01",
+          "photo": "https://example.com/photos/lolita.jpg"
+        },
+        {
+          "id": 70,
+          "titre": "Cien años de soledad",
+          "auteur": "Gabriel Garcia Marquez",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1967-01-01",
+          "photo": "https://example.com/photos/cien_anos_de_soledad.jpg"
+        },
+        {
+          "id": 71,
+          "titre": "Pedro Páramo",
+          "auteur": "Juan Rulfo",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1955-01-01",
+          "photo": "https://example.com/photos/pedro_paramo.jpg"
+        },
+        {
+          "id": 72,
+          "titre": "Les Travailleurs de la mer",
+          "auteur": "Victor Hugo",
+          "categorie": "Classique",
+          "disponible": true,
+          "date_publication": "1866-01-01",
+          "photo": "https://example.com/photos/les_travailleurs_de_la_mer.jpg"
+        },
+        {
+          "id": 73,
+          "titre": "La Condition humaine",
+          "auteur": "André Malraux",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1933-01-01",
+          "photo": "https://example.com/photos/la_condition_humaine.jpg"
+        },
+        {
+          "id": 74,
+          "titre": "Les Nourritures terrestres",
+          "auteur": "André Gide",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1897-01-01",
+          "photo": "https://example.com/photos/les_nourritures_terrestres.jpg"
+        },
+        {
+          "id": 75,
+          "titre": "L'Insoutenable Légèreté de l'être",
+          "auteur": "Milan Kundera",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1984-01-01",
+          "photo": "https://example.com/photos/l_insoutenable_legerete_de_l_etre.jpg"
+        },
+        {
+          "id": 76,
+          "titre": "La Nausée",
+          "auteur": "Jean-Paul Sartre",
+          "categorie": "Philosophie",
+          "disponible": true,
+          "date_publication": "1938-01-01",
+          "photo": "https://example.com/photos/la_nausee.jpg"
+        },
+        {
+          "id": 77,
+          "titre": "En Attendant Godot",
+          "auteur": "Samuel Beckett",
+          "categorie": "Théâtre",
+          "disponible": true,
+          "date_publication": "1953-01-01",
+          "photo": "https://example.com/photos/en_attendant_godot.jpg"
+        },
+        {
+          "id": 78,
+          "titre": "Les Mots",
+          "auteur": "Jean-Paul Sartre",
+          "categorie": "Autobiographie",
+          "disponible": true,
+          "date_publication": "1964-01-01",
+          "photo": "https://example.com/photos/les_mots.jpg"
+        },
+        {
+          "id": 79,
+          "titre": "Le Mythe de Sisyphe",
+          "auteur": "Albert Camus",
+          "categorie": "Philosophie",
+          "disponible": true,
+          "date_publication": "1942-01-01",
+          "photo": "https://example.com/photos/le_mythe_de_sisyphe.jpg"
+        },
+        {
+          "id": 80,
+          "titre": "L'Écume des jours",
+          "auteur": "Boris Vian",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1947-01-01",
+          "photo": "https://example.com/photos/l_ecume_des_jours.jpg"
+        },
+        {
+          "id": 81,
+          "titre": "La Cantatrice chauve",
+          "auteur": "Eugène Ionesco",
+          "categorie": "Théâtre",
+          "disponible": true,
+          "date_publication": "1950-01-01",
+          "photo": "https://example.com/photos/la_cantatrice_chauve.jpg"
+        },
+        {
+          "id": 82,
+          "titre": "Antigone",
+          "auteur": "Jean Anouilh",
+          "categorie": "Théâtre",
+          "disponible": true,
+          "date_publication": "1944-01-01",
+          "photo": "https://example.com/photos/antigone.jpg"
+        },
+        {
+          "id": 83,
+          "titre": "Le Petit Nicolas",
+          "auteur": "René Goscinny",
+          "categorie": "Jeunesse",
+          "disponible": true,
+          "date_publication": "1959-01-01",
+          "photo": "https://example.com/photos/le_petit_nicolas.jpg"
+        },
+        {
+          "id": 84,
+          "titre": "Astérix le Gaulois",
+          "auteur": "René Goscinny",
+          "categorie": "Bande dessinée",
+          "disponible": true,
+          "date_publication": "1961-01-01",
+          "photo": "https://example.com/photos/asterix_le_gaulois.jpg"
+        },
+        {
+          "id": 85,
+          "titre": "Tintin au Tibet",
+          "auteur": "Hergé",
+          "categorie": "Bande dessinée",
+          "disponible": true,
+          "date_publication": "1960-01-01",
+          "photo": "https://example.com/photos/tintin_au_tibet.jpg"
+        },
+        {
+          "id": 86,
+          "titre": "Le Seigneur des anneaux : La Communauté de l'anneau",
+          "auteur": "J.R.R. Tolkien",
+          "categorie": "Fantasy",
+          "disponible": true,
+          "date_publication": "1954-01-01",
+          "photo": "https://example.com/photos/la_communaut_de_l_anneau.jpg"
+        },
+        {
+          "id": 87,
+          "titre": "Le Hobbit",
+          "auteur": "J.R.R. Tolkien",
+          "categorie": "Fantasy",
+          "disponible": true,
+          "date_publication": "1937-01-01",
+          "photo": "https://example.com/photos/le_hobbit.jpg"
+        },
+        {
+          "id": 88,
+          "titre": "Dune",
+          "auteur": "Frank Herbert",
+          "categorie": "Science-Fiction",
+          "disponible": true,
+          "date_publication": "1965-01-01",
+          "photo": "https://example.com/photos/dune.jpg"
+        },
+        {
+          "id": 89,
+          "titre": "La Colline des potences",
+          "auteur": "Dorothy M. Johnson",
+          "categorie": "Western",
+          "disponible": true,
+          "date_publication": "1957-01-01",
+          "photo": "https://example.com/photos/la_colline_des_potences.jpg"
+        },
+        {
+          "id": 90,
+          "titre": "Le Monde perdu",
+          "auteur": "Arthur Conan Doyle",
+          "categorie": "Aventure",
+          "disponible": true,
+          "date_publication": "1912-01-01",
+          "photo": "https://example.com/photos/le_monde_perdu.jpg"
+        },
+        {
+          "id": 91,
+          "titre": "Voyage au bout de la nuit",
+          "auteur": "Louis-Ferdinand Céline",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1932-01-01",
+          "photo": "https://example.com/photos/voyage_au_bout_de_la_nuit.jpg"
+        },
+        {
+          "id": 92,
+          "titre": "Mort à crédit",
+          "auteur": "Louis-Ferdinand Céline",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1936-01-01",
+          "photo": "https://example.com/photos/mort_a_credit.jpg"
+        },
+        {
+          "id": 93,
+          "titre": "Belle du Seigneur",
+          "auteur": "Albert Cohen",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1968-01-01",
+          "photo": "https://example.com/photos/belle_du_seigneur.jpg"
+        },
+        {
+          "id": 94,
+          "titre": "Les Choses",
+          "auteur": "Georges Perec",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1965-01-01",
+          "photo": "https://example.com/photos/les_choses.jpg"
+        },
+        {
+          "id": 95,
+          "titre": "La Vie mode d'emploi",
+          "auteur": "Georges Perec",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1978-01-01",
+          "photo": "https://example.com/photos/la_vie_mode_d_emploi.jpg"
+        },
+        {
+          "id": 96,
+          "titre": "La Promesse de l'aube",
+          "auteur": "Romain Gary",
+          "categorie": "Autobiographie",
+          "disponible": true,
+          "date_publication": "1960-01-01",
+          "photo": "https://example.com/photos/la_promesse_de_l_aube.jpg"
+        },
+        {
+          "id": 97,
+          "titre": "Les Racines du ciel",
+          "auteur": "Romain Gary",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1956-01-01",
+          "photo": "https://example.com/photos/les_racines_du_ciel.jpg"
+        },
+        {
+          "id": 98,
+          "titre": "La Jalousie",
+          "auteur": "Alain Robbe-Grillet",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1957-01-01",
+          "photo": "https://example.com/photos/la_jalousie.jpg"
+        },
+        {
+          "id": 99,
+          "titre": "L'Étranger",
+          "auteur": "Albert Camus",
+          "categorie": "Fiction",
+          "disponible": true,
+          "date_publication": "1942-01-01",
+          "photo": "https://example.com/photos/l_etranger.jpg"
+        },
+        {
+          "id": 100,
+          "titre": "Le Mythe de Sisyphe",
+          "auteur": "Albert Camus",
+          "categorie": "Philosophie",
+          "disponible": true,
+          "date_publication": "1942-01-01",
+          "photo": "https://example.com/photos/le_mythe_de_sisyphe.jpg"
+        }
+      ]
+    }
+  }
+  
