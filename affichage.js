@@ -3,12 +3,11 @@ function afficherLivres() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const booksList = document.getElementById('booksList');
 
-    // Utilisation d'un proxy pour contourner CORS
-    //const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const targetUrl = 'http://localhost:8080/ords/hr2/livre/';
+    
+    const url = 'http://localhost:8080/ords/bibliotheque/livre/';
                        
 
-    fetch(targetUrl)
+    fetch(url)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erreur HTTP ' + response.status);
