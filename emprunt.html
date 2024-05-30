@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emprunter des Livres - Bibliothèque en Ligne</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header class="main-header">
@@ -14,7 +14,6 @@
             <ul class="nav-list">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="livre.html">Liste des Livres</a></li>
-                <li><a href="inscription.html">Inscription</a></li>
             </ul>
         </nav>
     </header>
@@ -28,9 +27,15 @@
                 <label for="book-id">ID du Livre:</label>
                 <input type="text" id="book-id" name="book-id" class="form-input" required>
 
-                <button type="submit" class="form-button">Emprunter</button>
+                <button type="submit" id="empruntButton" onclick="afficherEmprunts()" class="form-button">Emprunter</button>
             </form>
         </section>
+
+        <section id="borrow-section">
+            <h2>Emprunts</h2>
+            <div id="borrowList"></div>
+        </section>
+        
     </main>
     <footer class="main-footer">
         <p>&copy; 2024 Bibliothèque en Ligne. Tous droits réservés.</p>

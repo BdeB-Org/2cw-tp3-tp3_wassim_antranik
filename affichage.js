@@ -3,9 +3,7 @@ function afficherLivres() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const booksList = document.getElementById('booksList');
 
-    
     const url = 'http://localhost:8080/ords/bibliotheque/livre/';
-                       
 
     fetch(url)
         .then(response => {
@@ -28,8 +26,8 @@ function afficherLivres() {
                             <h6>${book.titre}</h6>
                             <div>
                                 <div class="infos">
-                                    <p><strong>Auteur :</strong> ${book.auteur_id}</p>
-                                    <p><strong>Genre :</strong> ${book.genre_id}</p>
+                                    <p><strong>Auteur :</strong> ${book.auteur_nom}</p>
+                                    <p><strong>Genre :</strong> ${book.genre_nom}</p>
                                     <p><strong>Disponible :</strong> ${book.disponibilite === 'Y' ? 'Oui' : 'Non'}</p>
                                 </div>
                             </div>
